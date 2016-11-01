@@ -9,9 +9,9 @@ namespace EconomicGame
     public abstract class Building
     {
         public int CurrentLevel; // Поточний рівень будівлі
-        public int MaximumLevel = 10; // Максимальний рівень будівлі
-        public int CreatingTime; // Поточний час створення будівлі
-        public int FullCreatingTime; // Тривалість створення будівлі
+        protected int MaximumLevel; // Максимальний рівень будівлі
+        protected int CreatingTime; // Поточний час створення будівлі
+        protected int FullCreatingTime; // Тривалість створення будівлі
         public Player Owner; // Власник будівлі
         public int State; // Стан будівлі
         public Resources Price; // Вартість будівлі
@@ -21,6 +21,7 @@ namespace EconomicGame
     enum States
     {
         Building = 0, // Будується
-        Working = 1 // Працює (виробляє або добуває щось)
+        Working = 1, // Працює (виробляє або добуває щось)
+        Updating = 2 // Підвищує рівень та властивості
     }
 }
