@@ -10,15 +10,13 @@ namespace EconomicGame
     {
         static void Main(string[] args)
         {
-            
-    
+            List<Player> players = new List<Player>();
+            players.Add(new Player("Dima"));
 
-                List<Player> players = new List<Player>();
-                players.Add(new Player("Dima"));
-
-                Game game = new Game();
-                game.Start(players);
-            
+            Game game = new Game();
+            if (game.Start(players))
+                return;
+            Console.WriteLine("Smth wrong!");
         }
     }
 }
