@@ -22,7 +22,6 @@ namespace EconomicGame
             CurrentLevel = 1;
             MaximumLevel = 5;
             CreatingTime = 5;
-            FullCreatingTime = 5;
             this.Owner = Owner;
             State = (int)States.Building;
             Price.Coal = 0;

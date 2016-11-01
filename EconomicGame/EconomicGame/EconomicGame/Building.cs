@@ -10,8 +10,8 @@ namespace EconomicGame
     {
         public int CurrentLevel; // Поточний рівень будівлі
         protected int MaximumLevel; // Максимальний рівень будівлі
-        protected int CreatingTime; // Поточний час створення будівлі
-        protected int FullCreatingTime; // Тривалість створення будівлі
+        protected int CreatingTime; // Час створення будівлі
+        protected int StartRound; // Стартовий раунд створення будівлі
         public Player Owner; // Власник будівлі
         public int State; // Стан будівлі
         public Resources Price; // Вартість будівлі
