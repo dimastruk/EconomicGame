@@ -23,5 +23,11 @@ namespace EconomicGame
             // Стартові ресурси
             resources = new Resources(100, 100, 100, 100, 100, 100, 100);
         }
+
+        // Хід
+        public void Turn(int currentRound)
+        {
+            // Виклик функції яка заставляє користувача зробити хід
+        }
     }
 }

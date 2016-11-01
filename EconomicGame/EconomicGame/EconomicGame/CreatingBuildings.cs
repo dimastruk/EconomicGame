@@ -9,5 +9,9 @@ namespace EconomicGame
 {
     public class CreatingBuilding : Building
     {
+        public override void Do(int round)
+        {
+        }
+
     }
 }

@@ -34,5 +34,11 @@ namespace EconomicGame
             CollectTime = 10;
             CollectAmount = 20;
         }
+
+        
+        public override void Do(int round)
+        {
+            Console.WriteLine("Coal factory");
+        }
     }
 }

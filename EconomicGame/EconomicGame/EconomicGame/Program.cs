@@ -14,6 +14,8 @@ namespace EconomicGame
             players.Add(new Player("Dima"));
 
             Game game = new Game();
+            CoalFactory cf = new CoalFactory(players[0]);
+            game.AddBuilding(cf);
             if (game.Start(players))
                 return;
             Console.WriteLine("Smth wrong!");

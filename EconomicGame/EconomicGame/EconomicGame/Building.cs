@@ -15,6 +15,8 @@ namespace EconomicGame
         public Player Owner; // Власник будівлі
         public int State; // Стан будівлі
         public Resources Price; // Вартість будівлі
+
+        public abstract void Do(int round);
     }
 
     // Стани для будівлі

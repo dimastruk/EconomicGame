@@ -13,6 +13,8 @@ namespace EconomicGame
         // Номер поточного раунду
         public int CurrentRound { get; private set; } 
         // Список будівель
+        // ХЗ як реалізувати(((
+        private List<Building> allBuildings; 
 
         // Якщо гру створюємо без вказаного рівня, то за замовчуванням рівень = 1
         public Game() : this(1) {}
@@ -21,22 +23,29 @@ namespace EconomicGame
         {
             this.DifficultyLevel = DifficultyLevel;
             this.CurrentRound = 1;
+            allBuildings = new List<Building>();
         }
 
         public bool Start(List<Player> players)
         {
             try
             {
-                // Задання початкових ресурсів (поки що немає прив'язки до рівня складності)
-                foreach (var player in players)
+                bool isRun = true;
+                while (isRun)
                 {
-                    player.resources.Coal = 100;
-                    player.resources.Iron_Ore = 100;
-                    player.resources.Gold = 100;
-                    player.resources.Wood = 100;
-                    player.resources.Clay = 100;
-                    player.resources.Sand = 100;
-                    player.resources.Stone = 100;
+                
+                    foreach (var building in allBuildings)
+                    {
+                        building.Do(CurrentRound);
+                    }
+                    foreach (var player in players)
+                    {
+                        player.Turn(CurrentRound);
+                    }
+                    if (CurrentRound == 50)
+                        isRun = false;
+
+                    CurrentRound++;
                 }
             }
             catch (Exception)
@@ -45,5 +54,12 @@ namespace EconomicGame
             }
             return true;
         }
+
+        // Додати будівлю
+        public void AddBuilding(Building b)
+        {
+            allBuildings.Add(b);
+        }
+
     }
 }
