@@ -25,7 +25,7 @@ namespace EconomicGame
             foreach(var player in players)
             {
                 player.resources.Coal = 100;
-                player.resources.Iron_Ore = 100;
+                player.resources.Iron = 100;
                 player.resources.Gold = 100;
                 player.resources.Wood = 100;
                 player.resources.Clay = 100;

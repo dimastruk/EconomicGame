@@ -27,7 +27,7 @@ namespace EconomicGame
     public struct Resources
     {
         public int Coal; // Вугілля
-        public int Iron_Ore; // Залізна руда
+        public int Iron; // Залізо
         public int Gold; // Золото
         public int Wood; // Дерево
         public int Clay; // Глина
