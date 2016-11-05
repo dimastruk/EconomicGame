@@ -15,12 +15,17 @@ namespace EconomicGame
         public Player Owner; // Власник будівлі
         public int State; // Стан будівлі
         public Resources Price; // Вартість будівлі
+
+        public abstract void Do(int round);
+        protected abstract void Build(int round);
+        protected abstract void Working(int round);
+        protected abstract void Updating(int round);
     }
 
     // Стани для будівлі
     enum States
     {
-        Building = 0, // Будується
+        Build = 0, // Будується
         Working = 1, // Працює (виробляє або добуває щось)
         Updating = 2 // Підвищує рівень та властивості
     }

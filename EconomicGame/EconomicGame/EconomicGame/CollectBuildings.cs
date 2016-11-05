@@ -22,7 +22,7 @@ namespace EconomicGame
             MaximumLevel = 5;
             CreatingTime = 5;
             this.Owner = Owner;
-            State = (int)States.Building;
+            State = (int)States.Build;
             Price.Coal = 0;
             Price.Iron = 20;
             Price.Gold = 20;
@@ -31,6 +31,39 @@ namespace EconomicGame
             Price.Sand = 5;
             Price.Stone = 10;
             CollectAmount = 30;
+        }
+
+        public override void Do(int round)
+        {
+            if(this.State == (int)States.Build)
+            {
+                Build(round);
+            }
+
+            if (this.State == (int)States.Working)
+            {
+                Working(round);
+            }
+
+            if (this.State == (int)States.Updating)
+            {
+                Updating(round);
+            }
+        }
+
+        protected override void Build(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Working(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Updating(int round)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -44,7 +77,7 @@ namespace EconomicGame
             MaximumLevel = 5;
             CreatingTime = 6;
             this.Owner = Owner;
-            State = (int)States.Building;
+            State = (int)States.Build;
             Price.Coal = 10;
             Price.Iron = 0;
             Price.Gold = 30;
@@ -53,6 +86,39 @@ namespace EconomicGame
             Price.Sand = 10;
             Price.Stone = 15;
             CollectAmount = 15;
+        }
+
+        public override void Do(int round)
+        {
+            if (this.State == (int)States.Build)
+            {
+                Build(round);
+            }
+
+            if (this.State == (int)States.Working)
+            {
+                Working(round);
+            }
+
+            if (this.State == (int)States.Updating)
+            {
+                Updating(round);
+            }
+        }
+
+        protected override void Build(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Working(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Updating(int round)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -66,7 +132,7 @@ namespace EconomicGame
             MaximumLevel = 7;
             CreatingTime = 7;
             this.Owner = Owner;
-            State = (int)States.Building;
+            State = (int)States.Build;
             Price.Coal = 15;
             Price.Iron = 15;
             Price.Gold = 0;
@@ -75,6 +141,39 @@ namespace EconomicGame
             Price.Sand = 15;
             Price.Stone = 10;
             CollectAmount = 10;
+        }
+
+        public override void Do(int round)
+        {
+            if (this.State == (int)States.Build)
+            {
+                Build(round);
+            }
+
+            if (this.State == (int)States.Working)
+            {
+                Working(round);
+            }
+
+            if (this.State == (int)States.Updating)
+            {
+                Updating(round);
+            }
+        }
+
+        protected override void Build(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Working(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Updating(int round)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -88,7 +187,7 @@ namespace EconomicGame
             MaximumLevel = 6;
             CreatingTime = 6;
             this.Owner = Owner;
-            State = (int)States.Building;
+            State = (int)States.Build;
             Price.Coal = 10;
             Price.Iron = 10;
             Price.Gold = 5;
@@ -97,6 +196,39 @@ namespace EconomicGame
             Price.Sand = 0;
             Price.Stone = 15;
             CollectAmount = 30;
+        }
+
+        public override void Do(int round)
+        {
+            if (this.State == (int)States.Build)
+            {
+                Build(round);
+            }
+
+            if (this.State == (int)States.Working)
+            {
+                Working(round);
+            }
+
+            if (this.State == (int)States.Updating)
+            {
+                Updating(round);
+            }
+        }
+
+        protected override void Build(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Working(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Updating(int round)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -110,7 +242,7 @@ namespace EconomicGame
             MaximumLevel = 4;
             CreatingTime = 3;
             this.Owner = Owner;
-            State = (int)States.Building;
+            State = (int)States.Build;
             Price.Coal = 10;
             Price.Iron = 5;
             Price.Gold = 5;
@@ -119,6 +251,39 @@ namespace EconomicGame
             Price.Sand = 10;
             Price.Stone = 10;
             CollectAmount = 40;
+        }
+
+        public override void Do(int round)
+        {
+            if (this.State == (int)States.Build)
+            {
+                Build(round);
+            }
+
+            if (this.State == (int)States.Working)
+            {
+                Working(round);
+            }
+
+            if (this.State == (int)States.Updating)
+            {
+                Updating(round);
+            }
+        }
+
+        protected override void Build(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Working(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Updating(int round)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -132,7 +297,7 @@ namespace EconomicGame
             MaximumLevel = 4;
             CreatingTime = 3;
             this.Owner = Owner;
-            State = (int)States.Building;
+            State = (int)States.Build;
             Price.Coal = 5;
             Price.Iron = 5;
             Price.Gold = 10;
@@ -142,19 +307,52 @@ namespace EconomicGame
             Price.Stone = 15;
             CollectAmount = 35;
         }
+
+        public override void Do(int round)
+        {
+            if (this.State == (int)States.Build)
+            {
+                Build(round);
+            }
+
+            if (this.State == (int)States.Working)
+            {
+                Working(round);
+            }
+
+            if (this.State == (int)States.Updating)
+            {
+                Updating(round);
+            }
+        }
+
+        protected override void Build(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Working(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Updating(int round)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     // Завод видобутку каменю
     public class StoneFactory : CollectBuilding
     {
         // Побудова заводу
-        public StoneFactory()
+        public StoneFactory(Player Owner)
         {
             CurrentLevel = 1;
             MaximumLevel = 5;
             CreatingTime = 4;
             this.Owner = Owner;
-            State = (int)States.Building;
+            State = (int)States.Build;
             Price.Coal = 10;
             Price.Iron = 10;
             Price.Gold = 5;
@@ -163,6 +361,39 @@ namespace EconomicGame
             Price.Sand = 5;
             Price.Stone = 0;
             CollectAmount = 25;
+        }
+
+        public override void Do(int round)
+        {
+            if (this.State == (int)States.Build)
+            {
+                Build(round);
+            }
+
+            if (this.State == (int)States.Working)
+            {
+                Working(round);
+            }
+
+            if (this.State == (int)States.Updating)
+            {
+                Updating(round);
+            }
+        }
+
+        protected override void Build(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Working(int round)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Updating(int round)
+        {
+            throw new NotImplementedException();
         }
     }
 }

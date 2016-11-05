@@ -20,18 +20,13 @@ namespace EconomicGame
         public Player(string Name)
         {
             this.Name = Name;
-            resources = new Resources();
+            // Стартові ресурси
+            resources = new Resources(100, 100, 100, 100, 100, 100, 100);
         }
-    }
 
-    public struct Resources
-    {
-        public int Coal; // Вугілля
-        public int Iron; // Залізо
-        public int Gold; // Золото
-        public int Wood; // Дерево
-        public int Clay; // Глина
-        public int Sand; // Пісок
-        public int Stone; // Камінь
+        public void Turn(int currentRound)
+        {
+            // Виклик функції яка заставляє користувача зробити хід
+        }
     }
 }
