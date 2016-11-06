@@ -8,7 +8,7 @@ namespace EconomicGame
 {
     public abstract class Building
     {
-        public int CurrentLevel; // Поточний рівень будівлі
+        public int CurrentLevel { get; protected set; }// Поточний рівень будівлі
         protected int MaximumLevel; // Максимальний рівень будівлі
         protected int CreatingTime; // Час створення будівлі
         protected int StartRound; // Стартовий раунд створення будівлі

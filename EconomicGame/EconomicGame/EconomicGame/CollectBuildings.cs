@@ -10,32 +10,9 @@ namespace EconomicGame
     public abstract class CollectBuilding : Building
     {
         public int CollectAmount; // Кількість накопиченого ресурсу
-    }
-
-    // Завод видобутку вугілля
-    public class CoalFactory : CollectBuilding
-    {
-        // Побудова заводу
-        public CoalFactory(Player Owner)
-        {
-            CurrentLevel = 1;
-            MaximumLevel = 5;
-            CreatingTime = 5;
-            this.Owner = Owner;
-            State = (int)States.Build;
-            Price.Coal = 0;
-            Price.Iron = 20;
-            Price.Gold = 20;
-            Price.Wood = 10;
-            Price.Clay = 5;
-            Price.Sand = 5;
-            Price.Stone = 10;
-            CollectAmount = 30;
-        }
-
         public override void Do(int round)
         {
-            if(this.State == (int)States.Build)
+            if (this.State == (int)States.Build)
             {
                 Build(round);
             }
@@ -49,6 +26,32 @@ namespace EconomicGame
             {
                 Updating(round);
             }
+        }
+
+        public CollectBuilding()
+        {
+            CurrentLevel = 1;
+        }
+    }
+
+    // Завод видобутку вугілля
+    public class CoalFactory : CollectBuilding
+    {
+        // Побудова заводу
+        public CoalFactory(Player Owner)
+        {
+            MaximumLevel = 5;
+            CreatingTime = 5;
+            this.Owner = Owner;
+            State = (int)States.Build;
+            Price.Coal = 0;
+            Price.Iron = 20;
+            Price.Gold = 20;
+            Price.Wood = 10;
+            Price.Clay = 5;
+            Price.Sand = 5;
+            Price.Stone = 10;
+            CollectAmount = 30;
         }
 
         protected override void Build(int round)
@@ -73,7 +76,6 @@ namespace EconomicGame
         // Побудова заводу
         public IronFactory(Player Owner)
         {
-            CurrentLevel = 1;
             MaximumLevel = 5;
             CreatingTime = 6;
             this.Owner = Owner;
@@ -86,24 +88,6 @@ namespace EconomicGame
             Price.Sand = 10;
             Price.Stone = 15;
             CollectAmount = 15;
-        }
-
-        public override void Do(int round)
-        {
-            if (this.State == (int)States.Build)
-            {
-                Build(round);
-            }
-
-            if (this.State == (int)States.Working)
-            {
-                Working(round);
-            }
-
-            if (this.State == (int)States.Updating)
-            {
-                Updating(round);
-            }
         }
 
         protected override void Build(int round)
@@ -128,7 +112,6 @@ namespace EconomicGame
         // Побудова заводу
         public GoldFactory(Player Owner)
         {
-            CurrentLevel = 1;
             MaximumLevel = 7;
             CreatingTime = 7;
             this.Owner = Owner;
@@ -141,24 +124,6 @@ namespace EconomicGame
             Price.Sand = 15;
             Price.Stone = 10;
             CollectAmount = 10;
-        }
-
-        public override void Do(int round)
-        {
-            if (this.State == (int)States.Build)
-            {
-                Build(round);
-            }
-
-            if (this.State == (int)States.Working)
-            {
-                Working(round);
-            }
-
-            if (this.State == (int)States.Updating)
-            {
-                Updating(round);
-            }
         }
 
         protected override void Build(int round)
@@ -183,7 +148,6 @@ namespace EconomicGame
         // Побудова заводу
         public WoodFactory(Player Owner)
         {
-            CurrentLevel = 1;
             MaximumLevel = 6;
             CreatingTime = 6;
             this.Owner = Owner;
@@ -196,24 +160,6 @@ namespace EconomicGame
             Price.Sand = 0;
             Price.Stone = 15;
             CollectAmount = 30;
-        }
-
-        public override void Do(int round)
-        {
-            if (this.State == (int)States.Build)
-            {
-                Build(round);
-            }
-
-            if (this.State == (int)States.Working)
-            {
-                Working(round);
-            }
-
-            if (this.State == (int)States.Updating)
-            {
-                Updating(round);
-            }
         }
 
         protected override void Build(int round)
@@ -238,7 +184,6 @@ namespace EconomicGame
         // Побудова заводу
         public ClayFactory(Player Owner)
         {
-            CurrentLevel = 1;
             MaximumLevel = 4;
             CreatingTime = 3;
             this.Owner = Owner;
@@ -251,24 +196,6 @@ namespace EconomicGame
             Price.Sand = 10;
             Price.Stone = 10;
             CollectAmount = 40;
-        }
-
-        public override void Do(int round)
-        {
-            if (this.State == (int)States.Build)
-            {
-                Build(round);
-            }
-
-            if (this.State == (int)States.Working)
-            {
-                Working(round);
-            }
-
-            if (this.State == (int)States.Updating)
-            {
-                Updating(round);
-            }
         }
 
         protected override void Build(int round)
@@ -293,7 +220,6 @@ namespace EconomicGame
         // Побудова заводу
         public SandFactory(Player Owner)
         {
-            CurrentLevel = 1;
             MaximumLevel = 4;
             CreatingTime = 3;
             this.Owner = Owner;
@@ -306,24 +232,6 @@ namespace EconomicGame
             Price.Sand = 0;
             Price.Stone = 15;
             CollectAmount = 35;
-        }
-
-        public override void Do(int round)
-        {
-            if (this.State == (int)States.Build)
-            {
-                Build(round);
-            }
-
-            if (this.State == (int)States.Working)
-            {
-                Working(round);
-            }
-
-            if (this.State == (int)States.Updating)
-            {
-                Updating(round);
-            }
         }
 
         protected override void Build(int round)
@@ -348,7 +256,6 @@ namespace EconomicGame
         // Побудова заводу
         public StoneFactory(Player Owner)
         {
-            CurrentLevel = 1;
             MaximumLevel = 5;
             CreatingTime = 4;
             this.Owner = Owner;
@@ -361,24 +268,6 @@ namespace EconomicGame
             Price.Sand = 5;
             Price.Stone = 0;
             CollectAmount = 25;
-        }
-
-        public override void Do(int round)
-        {
-            if (this.State == (int)States.Build)
-            {
-                Build(round);
-            }
-
-            if (this.State == (int)States.Working)
-            {
-                Working(round);
-            }
-
-            if (this.State == (int)States.Updating)
-            {
-                Updating(round);
-            }
         }
 
         protected override void Build(int round)
