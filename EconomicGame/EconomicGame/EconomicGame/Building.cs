@@ -12,9 +12,9 @@ namespace EconomicGame
         protected int MaximumLevel; // Максимальний рівень будівлі
         protected int CreatingTime; // Час створення будівлі
         protected int StartRound; // Стартовий раунд створення будівлі
-        public Player Owner; // Власник будівлі
-        public int State; // Стан будівлі
-        public Resources Price; // Вартість будівлі
+        public Player Owner { get; protected set; } // Власник будівлі
+        public int State { get; protected set; } // Стан будівлі
+        protected Resources Price; // Вартість будівлі
 
         public abstract void Do(int round);
         protected abstract void Build(int round);

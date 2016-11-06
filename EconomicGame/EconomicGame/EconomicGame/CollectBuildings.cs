@@ -9,7 +9,7 @@ namespace EconomicGame
 {
     public abstract class CollectBuilding : Building
     {
-        public int CollectAmount; // Кількість накопиченого ресурсу
+        protected int CollectAmount; // Кількість накопиченого ресурсу
         public override void Do(int round)
         {
             if (this.State == (int)States.Build)

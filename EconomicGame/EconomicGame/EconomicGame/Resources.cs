@@ -16,15 +16,15 @@ namespace EconomicGame
         public int Sand; // Пісок
         public int Stone; // Камінь
 
-        public Resources(int coal, int iron, int gold, int wood, int clay, int sand, int stone) : this()
+        public Resources(int Coal, int Iron, int Gold, int Wood, int Clay, int Sand, int Stone) : this()
         {
-            this.Coal = coal;
-            this.Iron = iron;
-            this.Gold = gold;
-            this.Wood = wood;
-            this.Clay = clay;
-            this.Sand = sand;
-            this.Stone = stone;
+            this.Coal = Coal;
+            this.Iron = Iron;
+            this.Gold = Gold;
+            this.Wood = Wood;
+            this.Clay = Clay;
+            this.Sand = Sand;
+            this.Stone = Stone;
         }
     }
 }
